@@ -1,13 +1,58 @@
 *{
     margin: 0;
     padding: 0;
+
 }
+
+#cloud{
+    width: 50px;
+    height: 25px;
+    position: relative;
+    top: 30px;
+    left: 1200px;
+    animation: moveCloud 5s infinite linear;
+    z-index: 2;
+}
+#cloud2{
+    width: 50px;
+    height: 25px;
+    position: relative;
+    top: 20px;
+    left: 1600px;
+    animation: moveCloud2 7500ms infinite linear;
+    z-index: 2;
+}
+#cloud3{
+    width: 50px;
+    height: 25px;
+    position: relative;
+    top: 10px;
+    left: 1000px;
+    animation: moveCloud3 10s infinite linear;
+    z-index: 2;
+}
+
+@keyframes moveCloud{
+    0%{left: 800px;}
+    100%{left: -100px;}
+}
+@keyframes moveCloud2{
+    0%{left: 1200px;}
+    100%{left: -100px;}
+}
+@keyframes moveCloud3{
+    0%{left: 1600px;}
+    100%{left: -100px;}
+}
+
 #game{
     width: 500px;
-    height: 200px;
+    height: 230px;
     margin: auto;
+    background-color: black;
     border: 1px solid black;
     overflow: hidden;
+    z-index: 100;
 }
 #player{
     width: 20px;
@@ -16,6 +61,7 @@
     position: relative;
     top: 150px;
     left: 10px;
+    z-index: 1;
 }
 #block{
     width: 20px;
@@ -25,6 +71,7 @@
     top: 130px;
     left: 500px;
     animation: run 1s infinite linear;
+    z-index: 1;
 }
 @keyframes run{
     0%{left: 500px;}
